@@ -16,16 +16,17 @@ Button clickbtn;
 
         clickbtn=(Button)findViewById(R.id.button);
 
-        clickbtn.setOnClickListener(new ShablcuHandler());
+        clickbtn.setOnClickListener(listener);
 
     }
 
-    class ShablcuHandler implements View.OnClickListener{
-    @Override
-    public void onClick(View v) {
-        Log.d("oops","click btn metrhod 2");
+    View.OnClickListener listener=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Log.d("oops", "click btn metrhod 3");
 
-    }
-    }
+        }
+    };
+
 
 }

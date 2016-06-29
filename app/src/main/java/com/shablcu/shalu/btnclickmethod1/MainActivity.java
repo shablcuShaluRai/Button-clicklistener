@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity  {
 Button clickbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,13 +16,16 @@ Button clickbtn;
 
         clickbtn=(Button)findViewById(R.id.button);
 
-        clickbtn.setOnClickListener(this);
+        clickbtn.setOnClickListener(new ShablcuHandler());
 
     }
 
+    class ShablcuHandler implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         Log.d("oops","click btn metrhod 2");
 
     }
+    }
+
 }

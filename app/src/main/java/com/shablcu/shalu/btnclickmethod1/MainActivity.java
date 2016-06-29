@@ -16,17 +16,16 @@ Button clickbtn;
 
         clickbtn=(Button)findViewById(R.id.button);
 
-        clickbtn.setOnClickListener(listener);
+        clickbtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Log.d("oops", "click btn metrhod 3");
+
+                    }
+                }
+
+        );
 
     }
-
-    View.OnClickListener listener=new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Log.d("oops", "click btn metrhod 3");
-
-        }
-    };
-
 
 }
